@@ -45,9 +45,10 @@ class App extends Component {
     return (
       <div>
       {array.map(item=>(
-        <li key={item.id}>
-        {item.company.name}
-        </li>
+        <div>
+       <p>Email :  {item.email}</p>
+       <p>Zip code : {item.address.zipcode}</p>
+       </div>
       ))}
       <Title title={title}/>
       <Form form={form}/>
