@@ -23,22 +23,9 @@ class RandomUser extends Component {
       });
     })
   }
-  // componentDidMount(){
-  //   fetch('https://jsonplaceholder.typicode.com/users')
-  //   .then(res=>res.json())
-  //   .then(json=>{
-  //     this.setState({
-  //         array:json,
-  //         isLoading:true,
-  //         // website:res.website
-  //     });
-  //   })
-   
-  // }
 
   render() {
     const {isLoading,results} = this.state;
-
     if(!isLoading)
     {
       <h1>Loading.....</h1>
