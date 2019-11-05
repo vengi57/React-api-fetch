@@ -25,8 +25,8 @@ class App extends Component {
       website:undefined
     }
   }
-  componentDidMount(){
-    fetch('https://jsonplaceholder.typicode.com/users')
+  async componentDidMount(){
+     await fetch('https://jsonplaceholder.typicode.com/users')
     .then(res=>res.json())
     .then(json=>{
       this.setState({
