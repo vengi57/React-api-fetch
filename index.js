@@ -7,6 +7,7 @@ import Form from "./components/Form";
 import Weather from "./components/Weather";
 import RandomUser from "./components/RandomUser";
 import Hooks from "./components/Hooks";
+import HooksUpdate from "./components/HooksUpdate";
 import axios from 'axios';
 
 
@@ -57,6 +58,7 @@ class App extends Component {
       <Weather weather={weather}/>
       <RandomUser/>
       <Hooks/>
+      <HooksUpdate/>
       </div>
     );
   }

@@ -16,15 +16,16 @@ export default function Hooks()
 
   //fetching the data using function
 
-    useEffect( () => {
-     const fetchdata = async() =>{
+  useEffect( () => {
+    fetchdata();
+  }, []);
+
+  async function fetchdata(){
     const result = await axios(
       'https://randomuser.me/api/',
     );
     setData(result.data);
      };
-    fetchdata();
-  }, []);
   return (
     <div>
       {data.results.map(item => (
