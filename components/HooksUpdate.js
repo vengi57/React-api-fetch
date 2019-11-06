@@ -8,25 +8,30 @@ export default function HooksUpdate()
   const [data, setData] = useState({ hits: [] });
   const [query,setQuery] = useState(''); 
   const [search,setSearch] = useState('');
-  // const [search, setSearch] = useState('');
 
 const handleSubmit = e =>
 {
   e.preventDefault();
   setSearch(query);
-  // setSearch(query);
 }
 const apifetch= async()=>
 {
+  try{
     const result = await axios(
       `https://hn.algolia.com/api/v1/search/?query=${query}`,
     );
+    console.log("Data received");
     setData(result.data);
+  }
+  catch(error){
+      console.log("Error",error);
+  }   
 }
-  
-   useEffect(() => {
+
+useEffect(() => {
     apifetch();
   }, [search]);
+  
   return (
     <div>
     <input
