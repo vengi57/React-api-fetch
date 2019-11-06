@@ -31,7 +31,7 @@ const apifetch= async()=>
 useEffect(() => {
     apifetch();
   }, [search]);
-  
+
   return (
     <div>
     <input
